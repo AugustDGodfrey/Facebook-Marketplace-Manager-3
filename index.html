@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Workout Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <h1>AI Workout Generator</h1>
+      <p>Create a personalized workout plan for 10–120 minutes with strength, cardio, or mixed goals.</p>
+    </header>
+
+    <section class="form-card">
+      <form id="workout-form">
+        <div class="input-group">
+          <label for="duration">Duration (minutes)</label>
+          <input id="duration" name="duration" type="number" min="10" max="120" step="5" value="30" required />
+        </div>
+
+        <div class="input-group">
+          <label for="goal">Workout goal</label>
+          <select id="goal" name="goal">
+            <option value="strength">Strength</option>
+            <option value="cardio">Cardio</option>
+            <option value="mixed">Mixed</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="difficulty">Difficulty level</label>
+          <select id="difficulty" name="difficulty">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="mixed-mode">Mixed workout mode</label>
+          <select id="mixed-mode" name="mixedMode">
+            <option value="blend">Same-session blend</option>
+            <option value="blocks">Strength then cardio</option>
+          </select>
+        </div>
+
+        <button type="submit" class="generate-button">Generate Workout</button>
+      </form>
+    </section>
+
+    <section class="result-card">
+      <div class="result-header">
+        <h2>Your Workout Plan</h2>
+        <p id="summary-text">Complete all sections in order. Adjust the pace based on difficulty.</p>
+      </div>
+      <div class="table-wrap">
+        <table id="workout-table">
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>Exercise</th>
+              <th>Load</th>
+              <th>Reps / Duration</th>
+              <th>Rest</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
