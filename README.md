@@ -1,4 +1,4 @@
-# Facebook-Marketplace-Manager-3
+# AIWorkoutPLanner
 
 This project is a frontend-only AI workout generator built with basic HTML, CSS, and JavaScript. It creates a personalized workout plan based on duration, goal, difficulty, and mixed workout preferences.
 
